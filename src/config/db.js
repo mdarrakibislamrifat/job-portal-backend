@@ -8,7 +8,6 @@ if (process.env.NODE_ENV !== 'production') {
 
 
  const connectDB=async()=>{
-    console.log("Mongo uri",process.env.MONGO_URI)
     try{
         await mongoose.connect(process.env.MONGO_URI);
         console.log("DB connected");
