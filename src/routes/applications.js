@@ -1,7 +1,8 @@
 import express from 'express';
 import { protect } from '../middleware/auth.js';
-import { authorize } from '../middleware/roles.js';
-import { applyToJob, getAppliedJobs } from '../controllers/application.controller.js';
+
+import { applyToJob, getAppliedJobs } from '../controllers/applicationController.js';
+import authorize from '../middleware/roles.js';
 
 const router = express.Router();
 

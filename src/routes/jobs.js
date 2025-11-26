@@ -1,13 +1,17 @@
 import express from 'express';
-import { protect } from '../middleware/auth.js';
-import { authorize } from '../middleware/roles.js';
+
+
 import {
   createJob,
   updateJob,
   getAllJobs,
   getJobById,
   getApplicantsForJob
-} from '../controllers/job.controller.js';
+} from '../controllers/jobController.js';
+
+import { protect } from '../middleware/auth.js';
+import authorize from '../middleware/roles.js';
+
 
 const router = express.Router();
 

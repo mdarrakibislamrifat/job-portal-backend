@@ -2,6 +2,10 @@ import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import connectDB from './config/db.js';
+import authRoutes from './routes/auth.js';
+import jobRoutes from './routes/jobs.js';
+import applicationRoutes from './routes/applications.js';
+import adminRoutes from './routes/admin.js';
 
 
 
@@ -15,10 +19,10 @@ connectDB();
 
 
 // routes
-// app.use('/api/auth', './routes/auth');
-// app.use('/api/jobs', './routes/jobs');
-// app.use('/api/applications', './routes/applications');
-// app.use('/api/admin', './routes/admin');
+app.use('/api/auth', authRoutes);
+app.use('/api/jobs', jobRoutes);
+app.use('/api/applications', applicationRoutes);
+app.use('/api/admin', adminRoutes);
 
 
 app.get('/', (req, res) => res.send('Job Portal API'));

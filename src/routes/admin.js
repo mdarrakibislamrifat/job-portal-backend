@@ -1,6 +1,6 @@
 import express from 'express';
 import { protect } from '../middleware/auth.js';
-import { authorize } from '../middleware/roles.js';
+import authorize  from '../middleware/roles.js';
 import {
   getPendingEmployers,
   approveEmployer,
@@ -9,7 +9,7 @@ import {
   unblockUser,
   getAllJobs,
   getAllApplications
-} from '../controllers/admin.controller.js';
+} from '../controllers/adminController.js';
 
 const router = express.Router();
 
